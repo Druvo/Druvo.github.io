@@ -3005,10 +3005,9 @@ h6 {
   /* Footer Area css
   ============================================================================================ */
   .footer_area {
-    padding-top: 80px !important;
-    padding-bottom: 80px !important;
-    background-image: none !important;
-    background-color: #fcf8ff; }
+z-index: 1;
+background: url(../img/banner/home-banner.png) no-repeat top center;
+}
 
   /* Blog page Area css
   ============================================================================================ */
@@ -3252,8 +3251,11 @@ h6 {
     content: none; }
 
 .footer_area {
-  padding: 120px 0;
-  position: relative; }
+z-index: 1;
+background: url(../img/banner/home-banner.png) no-repeat top center;
+
+
+}
   .footer_area:before {
     content: '';
     position: absolute;
