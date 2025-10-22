@@ -30,8 +30,10 @@ body {
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #777777;
-  background: url(../img/body-bg.png) no-repeat center; }
+  color: #E8F4FD;
+  background: radial-gradient(ellipse at top, #051821, #0A1C2B);
+  min-height: 100vh;
+  position: relative; }
 
 h1,
 h2,
@@ -39,9 +41,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Rubik", sans-serif;
-  font-weight: 500;
-  color: #000000; }
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: #F0F8FF;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.3); }
 
 .list {
   list-style: none;
@@ -138,36 +141,37 @@ button:focus {
 /* Start Gradient Area css
 ============================================================================================ */
 .gradient-bg, .header_area .navbar .nav .nav-item.submenu ul .nav-item:hover .nav-link, .blog_right_sidebar .widget_title, .blog_right_sidebar .newsletter_widget .bbtns, .blog_right_sidebar .tag_cloud_widget ul li a:hover, .blog-pagination .page-item.active .page-link, .blog-pagination .page-link:hover, .comments-area .btn-reply:hover {
-  background: -webkit-linear-gradient(90deg, #84f1c5 0%, #854fee 100%);
-  background: -moz-linear-gradient(90deg, #84f1c5 0%, #84ddf1 100%);
-  background: -o-linear-gradient(90deg, #84f1c5 0%, #84ddf1 100%);
-  background: linear-gradient(90deg, #84f1c5 0%, #84ddf1 100%); }
+  background: -webkit-linear-gradient(90deg, #00FFFF 0%, #00d4ff 100%);
+  background: -moz-linear-gradient(90deg, #00FFFF 0%, #00d4ff 100%);
+  background: -o-linear-gradient(90deg, #00FFFF 0%, #00d4ff 100%);
+  background: linear-gradient(90deg, #00FFFF 0%, #00d4ff 100%); }
 
 .border-gradient {
-  border-image: -webkit-linear-gradient(90deg, #84f1c5 0%, #84ddf1 100%);
-  border-image: -moz-linear-gradient(90deg, #84f1c5 0%, #84ddf1 100%);
-  border-image: -o-linear-gradient(90deg, #84f1c5 0%, #84ddf1 100%);
-  border-image: linear-gradient(90deg, #84f1c5 0%, #84ddf1 100%); }
+  border-image: -webkit-linear-gradient(90deg, #00FFFF 0%, #00d4ff 100%);
+  border-image: -moz-linear-gradient(90deg, #00FFFF 0%, #00d4ff 100%);
+  border-image: -o-linear-gradient(90deg, #00FFFF 0%, #00d4ff 100%);
+  border-image: linear-gradient(90deg, #00FFFF 0%, #00d4ff 100%); }
 
 .gradient-bg2 {
-  background: -webkit-linear-gradient(90deg, #84f1c5 0%, #84ddf1 100%);
-  background: -moz-linear-gradient(90deg, #84f1c5 0%, #84ddf1 100%);
-  background: -o-linear-gradient(90deg, #84f1c5 0%, #84ddf1 100%);
-  background: linear-gradient(90deg, #84f1c5 0%, #84ddf1 100%); }
+  background: -webkit-linear-gradient(90deg, #00FFFF 0%, #00d4ff 100%);
+  background: -moz-linear-gradient(90deg, #00FFFF 0%, #00d4ff 100%);
+  background: -o-linear-gradient(90deg, #00FFFF 0%, #00d4ff 100%);
+  background: linear-gradient(90deg, #00FFFF 0%, #00d4ff 100%); }
 
 .gradient-color, .contact_info .info_item i {
-  background: -webkit-linear-gradient(90deg, #84f1c5 0%, #84ddf1 100%);
-  background: -moz-linear-gradient(90deg, #84f1c5 0%, #84ddf1 100%);
-  background: -o-linear-gradient(90deg, #84f1c5 0%, #84ddf1 100%);
-  background: linear-gradient(90deg, #84f1c5 0%, #84ddf1 100%);
+  background: -webkit-linear-gradient(90deg, #00FFFF 0%, #00d4ff 100%);
+  background: -moz-linear-gradient(90deg, #00FFFF 0%, #00d4ff 100%);
+  background: -o-linear-gradient(90deg, #00FFFF 0%, #00d4ff 100%);
+  background: linear-gradient(90deg, #00FFFF 0%, #00d4ff 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent; }
 
 /* End Gradient Area css
 ============================================================================================ */
 .primary_btn {
   display: inline-block;
-  color: #fff;
+  color: #0A1C2B;
   letter-spacing: 0px;
   font-family: "Rubik", sans-serif;
   font-weight: 500;
@@ -177,30 +181,36 @@ button:focus {
   text-align: center;
   cursor: pointer;
   text-transform: uppercase;
-  border-radius: 5px;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  background-image: linear-gradient(to right, #84f1c5 0%, #854fee 100%), radial-gradient(circle at top left, #84f1c5, #84ddf1);
-  border: double 2px transparent;
-  box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3); }
+  border-radius: 25px;
+  background: linear-gradient(45deg, #00FFFF, #00d4ff);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 0 20px rgba(0, 255, 255, 0.7),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease; }
   .primary_btn span {
     padding: 0 42px; }
   .primary_btn.tr-bg {
-    background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #84f1c5, #84ddf1);
-    border: 2px solid transparent;
-    color: #222222;
-    box-shadow: none; }
+    background: linear-gradient(#0A1C2B, #0A1C2B);
+    border: 2px solid #00FFFF;
+    color: #00FFFF;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); }
     .primary_btn.tr-bg:hover {
-      background-image: linear-gradient(to right, #84f1c5 0%, #84ddf1 100%), radial-gradient(circle at top left, #84f1c5, #84ddf1);
-      border: double 2px transparent;
-      color: #ffffff;
-      box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3); }
+      background: linear-gradient(45deg, #00FFFF, #00d4ff);
+      border: none;
+      color: #0A1C2B;
+      box-shadow: 
+        0 0 30px rgba(0, 255, 255, 0.9),
+        0 10px 25px rgba(0, 0, 0, 0.3); }
   .primary_btn:hover {
-    background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #84f1c5, #84ddf1);
-    border: 2px solid #84ddf1;
-    color: #222222;
-    box-shadow: none;
-    background-clip: border-box; }
+    transform: translateY(-3px);
+    box-shadow: 
+      0 0 30px rgba(0, 255, 255, 0.9),
+      0 10px 25px rgba(0, 0, 0, 0.3),
+      inset 0 0 20px rgba(255, 255, 255, 0.2);
+    color: #0A1C2B; }
 
 .overlay {
   position: absolute;
@@ -950,7 +960,7 @@ button:focus {
       font-size: 14px;
       transition: all 0.2s linear; }
       .single-post-area .social-links li a:hover {
-        color: ##84f1c5; }
+        color: #00FFFF; }
 .single-post-area .blog_details {
   padding-top: 26px; }
   .single-post-area .blog_details p {
@@ -1230,7 +1240,7 @@ button:focus {
     .modal-message .modal-dialog .modal-content .modal-header h2 {
       display: block;
       text-align: center;
-      color: ##84f1c5;
+      color: #00FFFF;
       padding-bottom: 10px;
       font-family: "Roboto", sans-serif; }
     .modal-message .modal-dialog .modal-content .modal-header p {
@@ -1255,20 +1265,20 @@ button:focus {
     line-height: 26px; }
     .sample-text-area p b {
       font-weight: bold;
-      color: ##84f1c5; }
+      color: #00FFFF; }
     .sample-text-area p i {
-      color: ##84f1c5;
+      color: #00FFFF;
       font-style: italic; }
     .sample-text-area p sup {
-      color: ##84f1c5;
+      color: #00FFFF;
       font-style: italic; }
     .sample-text-area p sub {
-      color: ##84f1c5;
+      color: #00FFFF;
       font-style: italic; }
     .sample-text-area p del {
-      color: ##84f1c5; }
+      color: #00FFFF; }
     .sample-text-area p u {
-      color: ##84f1c5; }
+      color: #00FFFF; }
 
 /*============== End Elements Area css ================*/
 /*==============Elements Button Area css ================*/
@@ -1362,10 +1372,10 @@ button:focus {
 
 .link-border {
   background: transparent;
-  border: 1px solid ##84f1c5;
-  color: ##84f1c5; }
+  border: 1px solid #00FFFF;
+  color: #00FFFF; }
   .link-border:before {
-    background: ##84f1c5; }
+    background: #00FFFF; }
 
 .radius {
   border-radius: 3px; }
@@ -2469,7 +2479,7 @@ h6 {
 /* Start Features Area css
 ============================================================================================ */
 .features_area {
-  padding-bottom: 170px; }
+  /* padding-bottom: 170px; */ }
   @media (max-width: 1199px) {
     .features_area {
       padding-bottom: 50px; } }

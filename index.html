@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" href="img/favicon.png" type="image/png">
-	<title>Zahid Hasan || Portfolio</title>
+	<title>Zahid Hasan - Senior Software Engineer | Backend Specialist</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="vendors/linericon/style.css">
@@ -16,6 +16,8 @@
 	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
 	<!-- main css -->
 	<link rel="stylesheet" href="css/style.css">
+	<!-- cyberpunk theme css -->
+	<link rel="stylesheet" href="css/cyberpunk-theme.css">
 </head>
 
 <body>
@@ -23,45 +25,24 @@
 	<!--================ Start Header Area =================-->
 	<header class="header_area">
 		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light">
+			<nav class="navbar navbar-expand-lg navbar-light fixed-top">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html"><img style="height: 100px;" src="img/d.jpg" alt="" hidden></a>
-					<a class="navbar-brand logo_h" href="index.html"><img style="height: 100px;" src="img/logo.png" alt=""></a>
+					<a class="navbar-brand logo_h" href="index.html">
+						<img style="height: 80px;" src="img/main_logo.png" alt="Zahid Hasan Logo">
+					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
+						aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
 					</button>
-					<!-- Collect the nav links, forms, and other content for toggling
-
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Pages</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-									<li class="nav-item"><a class="nav-link" href="slider/slider.html">Slider</a></li>
-									<li class="nav-item"><a class="nav-link" href="portfolio-details.html">Portfolio Details</a></li>
-								</ul>
-							</li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Blog</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-								</ul>
-							</li>
-
-					-->
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav justify-content-end">
-							<li class="nav-item active"><a class="nav-link" href="#home_banner_area">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="#about_area">About</a></li>
-							<li class="nav-item"><a class="nav-link" href="#brand_area">Services</a></li>
+					
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+							<li class="nav-item active"><a class="nav-link" href="#home_banner_area">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="#skills_area">Skills</a></li>
+							<li class="nav-item"><a class="nav-link" href="#experience_area">Experience</a></li>
 							<li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-							<li class="nav-item"><a class="nav-link" href="#footer_area">Contact</a></li>
+							<li class="nav-item"><a class="nav-link" href="#contact_area">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -76,19 +57,20 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-7">
-						<div class="banner_content">
-							<h3 class="text-uppercase">Hell0</h3>
+						<div class="banner_content cyberpunk-card">
+							<h3 class="text-uppercase">Hello</h3>
 							<h1 class="text-uppercase">I am Zahid Hasan</h1>
-							<h5 class="text-uppercase">senior Software Engineer</h5>
-							<div class="d-flex align-items-center">
-								<a class="primary_btn" href="https://fiverr.com/druvo_coder"><span>Hire Me</span></a>
-								<a class="primary_btn tr-bg" href="Zahid_resume.pdf"><span>Get CV</span></a>
+							<h5 class="text-uppercase">Senior Software Engineer</h5>
+							<p class="mt-3">Experienced .NET Developer with 7+ years of expertise in designing, developing, and maintaining scalable web and desktop applications. Specialized in .NET technologies, microservices, and API development with a strong focus on performance optimization and best coding practices.</p>
+							<div class="d-flex align-items-center mt-4">
+								<a class="primary_btn cyberpunk-btn" href="https://fiverr.com/druvo_coder"><span>Hire Me</span></a>
+								<a class="primary_btn tr-bg cyberpunk-btn ml-3" href="Zahid_resume.pdf"><span>Get CV</span></a>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-5">
 						<div class="home_right_img">
-							<img class="" src="img/banner/home-right.png" alt="">
+							<img class="cyberpunk-glow" src="img/banner/home-right.png" alt="" style="filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.5));">
 						</div>
 					</div>
 				</div>
@@ -97,173 +79,108 @@
 	</section>
 	<!--================ End Home Banner Area =================-->
 
-	<!--================ Start About Us Area =================-->
-	<section id="about_area" class="about_area section_gap">
-		<div class="container">
-			<div class="row justify-content-start align-items-center">
-				<div class="col-lg-5">
-					<div class="about_img">
-						<img class="" src="img/about-us.png" alt="">
-					</div>
-				</div>
-
-				<div class="offset-lg-1 col-lg-5">
-					<div class="main_title text-left">
-						<h2>let’s <br>
-							Introduce about <br>
-							myself</h2>
-						<p>
-							I am a Programmer in C# Windows Platform with 2 years plus experience. I also worked with python in web projects. Experienced with all stages of the development cycle for dynamic web projects and windows applications. Well-versed in numerous programming languages including C#, Python, JavaScript, SQL. I have experience in developing and implementing REST and SOAP APIs in applications.
-						</p>
-						<a class="primary_btn" href="Zahid_resume.pdf" download><span>Download CV</span></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================ End About Us Area =================-->
-
-	<!--================ Srart Brand Area =================-->
-	<section id="brand_area" class="brand_area section_gap_bottom">
+	<!--================ Start Skills Area =================-->
+	<section id="skills_area" class="skills_area section_gap">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-lg-6">
-					<div class="row">
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo1.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo2.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo3.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo4.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo5.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo6.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo7.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo8.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo9.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo10.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo11.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo12.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo13.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo14.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo15.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo16.png" alt="">
-								</div>
-							</div>
+				<div class="col-lg-8 text-center">
+					<div class="main_title">
+						<h2>Core Skills & Technologies</h2>
+						<p>Comprehensive expertise across modern software development stack</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<div class="skill-category cyberpunk-card">
+						<h3 style="color: #00FFFF; margin-bottom: 20px;">🚀 Backend & Frameworks</h3>
+						<div class="skills-list">
+							<span class="skill-tag">C#</span>
+							<span class="skill-tag">ASP.NET Core</span>
+							<span class="skill-tag">Web API</span>
+							<span class="skill-tag">Entity Framework Core</span>
+							<span class="skill-tag">LINQ</span>
+							<span class="skill-tag">SignalR</span>
+							<span class="skill-tag">WCF</span>
+							<span class="skill-tag">Windows Services</span>
+							<span class="skill-tag">Ocelot API Gateway</span>
+							<span class="skill-tag">Serilog</span>
+							<span class="skill-tag">Minio</span>
 						</div>
 					</div>
 				</div>
-				<div class="offset-lg-2 col-lg-4 col-md-6">
-					<div class="client-info">
-						<div class="d-flex mb-50">
-							<span class="lage">2</span>
-							<span class="smll">Years Experience Working</span>
+				<div class="col-lg-4 col-md-6">
+					<div class="skill-category cyberpunk-card">
+						<h3 style="color: #00FFFF; margin-bottom: 20px;">🏗️ Architecture & Design</h3>
+						<div class="skills-list">
+							<span class="skill-tag">OOP</span>
+							<span class="skill-tag">SOLID Principles</span>
+							<span class="skill-tag">Design Patterns</span>
+							<span class="skill-tag">Clean Architecture</span>
+							<span class="skill-tag">Microservices</span>
+							<span class="skill-tag">Domain Driven Design</span>
 						</div>
-						<div class="call-now d-flex">
-							<div>
-								<span class="fa fa-phone"></span>
-							</div>
-							<div class="ml-15">
-								<p>call me now</p>
-								<h3>+8801758143107</h3>
-							</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="skill-category cyberpunk-card">
+						<h3 style="color: #00FFFF; margin-bottom: 20px;">☁️ DevOps & Cloud</h3>
+						<div class="skills-list">
+							<span class="skill-tag">Docker</span>
+							<span class="skill-tag">Jenkins</span>
+							<span class="skill-tag">ArgoCD</span>
+							<span class="skill-tag">SonarQube</span>
+							<span class="skill-tag">AWS</span>
+							<span class="skill-tag">Azure</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row mt-4">
+				<div class="col-lg-4 col-md-6">
+					<div class="skill-category cyberpunk-card">
+						<h3 style="color: #00FFFF; margin-bottom: 20px;">🗄️ Database</h3>
+						<div class="skills-list">
+							<span class="skill-tag">MS SQL Server</span>
+							<span class="skill-tag">PostgreSQL</span>
+							<span class="skill-tag">MySQL</span>
+							<span class="skill-tag">SQLite</span>
+							<span class="skill-tag">Always Encrypted</span>
+							<span class="skill-tag">SSIS</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="skill-category cyberpunk-card">
+						<h3 style="color: #00FFFF; margin-bottom: 20px;">🔐 Security & Integration</h3>
+						<div class="skills-list">
+							<span class="skill-tag">OAuth2</span>
+							<span class="skill-tag">JWT</span>
+							<span class="skill-tag">Identity Server</span>
+							<span class="skill-tag">RESTful APIs</span>
+							<span class="skill-tag">Swagger</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="skill-category cyberpunk-card">
+						<h3 style="color: #00FFFF; margin-bottom: 20px;">🛠️ Development Tools</h3>
+						<div class="skills-list">
+							<span class="skill-tag">Visual Studio</span>
+							<span class="skill-tag">VS Code</span>
+							<span class="skill-tag">Postman</span>
+							<span class="skill-tag">Git</span>
+							<span class="skill-tag">MySQL Workbench</span>
+							<span class="skill-tag">SSMS</span>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!--================ End Brand Area =================-->
+	<!--================ End Skills Area =================-->
+
+
 
 	<!--================ Start Features Area =================-->
 	<section class="features_area">
@@ -271,50 +188,198 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-8 text-center">
 					<div class="main_title">
-						<h2>service offers </h2>
+						<h2>Professional Services</h2>
 						<p>
-							Develop projectsand maintainanoptimal workflow.<br>
-							Complete detailed programming and development tasks for public and internal websites and windows applications.<br>
-							Code Refactoring, Bug fixing, Implement new Requirements to exciting running software’s.<br>
-							Work with senior developer to manage large, complex projects for corporate clients.<br>
-							DevelopeandIntegrateAPI for applications.<br>
+							Enterprise-grade software development and architecture solutions.<br>
+							Microservices development, API design, and cloud-native applications.<br>
+							Leading development teams and implementing scalable backend systems.<br>
+							System architecture consulting and legacy system modernization.<br>
+							DevOps integration and CI/CD pipeline implementation.<br>
+							Code review, mentoring, and technical leadership.
 						</p>
 					</div>
 				</div>
 			</div>
 			<div class="row feature_inner">
 				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
+					<div class="feature_item cyberpunk-card">
 						<img src="img/services/s1.png" alt="">
-						<h4>Web Application</h4>
-						<p>Full site development (including front-end), AWS integration, maintenance and new business logic implementation. </p>
+						<h4>Microservices Architecture</h4>
+						<p>Design and implement scalable microservices using ASP.NET Core, API Gateway patterns, containerization with Docker, and cloud deployment.</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
+					<div class="feature_item cyberpunk-card">
 						<img src="img/services/s2.png" alt="">
-						<h4>Windows Application</h4>
-						<p>Full Development using WPF/WinForm (including GUI Design)and business logic implementation. </p>
+						<h4>Enterprise Applications</h4>
+						<p>Full-stack enterprise software development including ERP systems, admin panels, employee management systems, and business process automation.</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
+					<div class="feature_item cyberpunk-card">
 						<img src="img/services/s3.png" alt="">
-						<h4>Windows Service Application</h4>
-						<p>Development deployment and maintenance with business logic implementation </p>
+						<h4>Backend API Development</h4>
+						<p>RESTful API design, Web API development, database optimization, security implementation with OAuth2/JWT, and third-party integrations.</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
+					<div class="feature_item cyberpunk-card">
 						<img src="img/services/s4.png" alt="">
-						<h4>APIs</h4>
-						<p>DevelopeandIntegrateAPI for applications</p>
+						<h4>DevOps & Cloud Solutions</h4>
+						<p>CI/CD pipeline setup, Docker containerization, AWS/Azure deployment, monitoring with SonarQube, and automated testing implementation.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!--================ End Features Area =================-->
+
+	<!--================ Start Experience Area =================-->
+	<section id="experience_area" class="experience_area section_gap">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center">
+					<div class="main_title">
+						<h2>Professional Experience</h2>
+						<p>7+ years of progressive experience in software development, leading teams and delivering enterprise-scale solutions</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="experience-timeline">
+						<!-- BJIT Limited -->
+						<div class="experience-item cyberpunk-card mb-4">
+							<div class="row align-items-center">
+								<div class="col-md-3">
+									<h5 class="company-name" style="color: #00FFFF;">BJIT Limited</h5>
+									<p class="duration">Jan 2023 – Present</p>
+								</div>
+								<div class="col-md-9">
+									<h4 style="color: #4DFFFF;">Senior Software Engineer</h4>
+									<ul class="experience-details">
+										<li>Leading the backend API development team for Meter Reading Application & Admin Panel using Microservices architecture</li>
+										<li>Technologies: ASP.NET Core Web API, Ocelot API Gateway, Serilog, Minio</li>
+										<li>Independently developed Employee Attendance & Sales Tracking Portal (ASP.NET MVC, MS SQL)</li>
+										<li>Managing both backend and frontend components for enterprise applications</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Transcom Electronics -->
+						<div class="experience-item cyberpunk-card mb-4">
+							<div class="row align-items-center">
+								<div class="col-md-3">
+									<h5 class="company-name" style="color: #00FFFF;">Transcom Electronics Limited</h5>
+									<p class="duration">May 2021 – Jan 2023</p>
+								</div>
+								<div class="col-md-9">
+									<h4 style="color: #4DFFFF;">Software Programmer</h4>
+									<ul class="experience-details">
+										<li>Lead developer for ERP API For E-commerce platform</li>
+										<li>Technologies: ASP.NET Web API, MS SQL Server</li>
+										<li>Designed and implemented scalable API architecture for e-commerce integration</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Ektai Limited -->
+						<div class="experience-item cyberpunk-card mb-4">
+							<div class="row align-items-center">
+								<div class="col-md-3">
+									<h5 class="company-name" style="color: #00FFFF;">Ektai Limited</h5>
+									<p class="duration">Oct 2020 – Jan 2021</p>
+								</div>
+								<div class="col-md-9">
+									<h4 style="color: #4DFFFF;">Programmer</h4>
+									<ul class="experience-details">
+										<li>Customized OnlyOffice for corporate clients</li>
+										<li>Developed REST APIs for various corporate solutions</li>
+										<li>Maintained servers on AWS and Azure cloud platforms</li>
+										<li>Performed bug fixing and system optimization</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Tiger Park Limited -->
+						<div class="experience-item cyberpunk-card mb-4">
+							<div class="row align-items-center">
+								<div class="col-md-3">
+									<h5 class="company-name" style="color: #00FFFF;">Tiger Park Limited</h5>
+									<p class="duration">Feb 2018 – Sep 2020</p>
+								</div>
+								<div class="col-md-9">
+									<h4 style="color: #4DFFFF;">Software Engineer</h4>
+									<ul class="experience-details">
+										<li>Developed a global mobile recharge platform (ASP.NET MVC, MS SQL)</li>
+										<li>Integrated third-party APIs and implemented multi-currency transactions</li>
+										<li>Built WASA Visitor Management System and Web Portal</li>
+										<li>Technologies: WPF, MS SQL, Django, PostgreSQL</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Experience Area =================-->
+
+	<!--================ Start Education Area =================-->
+	<section class="education_area section_gap">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center">
+					<div class="main_title">
+						<h2>Education & Certifications</h2>
+						<p>Strong academic foundation and continuous learning in software engineering</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="education-section cyberpunk-card">
+						<h3 style="color: #00FFFF; margin-bottom: 30px;">🎓 Education</h3>
+						
+						<div class="education-item mb-4">
+							<h4 style="color: #4DFFFF;">B.Sc. in Computer Science and Engineering</h4>
+							<h5 style="color: #00d4ff;">Bangladesh University of Business and Technology (BUBT)</h5>
+							<p class="duration">2018 – 2022</p>
+						</div>
+
+						<div class="education-item">
+							<h4 style="color: #4DFFFF;">Diploma in Computer Technology</h4>
+							<h5 style="color: #00d4ff;">Saic Institute of Management and Technology</h5>
+							<p class="duration">2014 – 2018</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-6">
+					<div class="certifications-section cyberpunk-card">
+						<h3 style="color: #00FFFF; margin-bottom: 30px;">🏆 Awards & Certifications</h3>
+						
+						<div class="certification-item mb-4">
+							<h4 style="color: #4DFFFF;">🥇 Best Performer of the Year</h4>
+							<h5 style="color: #00d4ff;">PC Application Development</h5>
+							<p>BJIT Limited, 2023–2024</p>
+						</div>
+
+						<div class="certification-item">
+							<h4 style="color: #4DFFFF;">📜 Design Patterns in C# and .NET</h4>
+							<h5 style="color: #00d4ff;">Udemy Certification</h5>
+							<p>Advanced certification in software design patterns and architectural principles</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Education Area =================-->
 
 	<!--================Start Portfolio Area =================-->
 	<section class="portfolio_area" id="portfolio">
@@ -351,8 +416,8 @@
 								</a>
 							</div>
 							<div class="short_info">
-								<h4><a href="portfolio-details.html">minimal design</a></h4>
-								<p>Animated, portfolio</p>
+								<h4><a href="http://gtopup.me" target="_blank">Global Top-up</a></h4>
+								<p>Web Application, Mobile Recharge</p>
 							</div>
 						</div>
 					</div>
@@ -368,8 +433,8 @@
 								</a>
 							</div>
 							<div class="short_info">
-								<h4><a href="portfolio-details.html">Paint wall</a></h4>
-								<p>Animated, portfolio</p>
+								<h4><a href="https://transcomdigital.com/" target="_blank">Transcom Digital</a></h4>
+								<p>E-commerce, nopCommerce</p>
 							</div>
 						</div>
 					</div>
@@ -385,8 +450,8 @@
 								</a>
 							</div>
 							<div class="short_info">
-								<h4><a href="portfolio-details.html">female light</a></h4>
-								<p>Animated, portfolio</p>
+								<h4>WASA Visitor Management</h4>
+								<p>Windows Application, WPF</p>
 							</div>
 						</div>
 					</div>
@@ -402,8 +467,8 @@
 								</a>
 							</div>
 							<div class="short_info">
-								<h4><a href="portfolio-details.html">fourth air</a></h4>
-								<p>Animated, portfolio</p>
+								<h4><a href="https://pmfellowship.pmo.gov.bd/" target="_blank">PM Fellowship</a></h4>
+								<p>Django, Web Application</p>
 							</div>
 						</div>
 					</div>
@@ -419,8 +484,8 @@
 								</a>
 							</div>
 							<div class="short_info">
-								<h4><a href="portfolio-details.html">together sign</a></h4>
-								<p>Animated, portfolio</p>
+								<h4>ERP Synchronizer</h4>
+								<p>Windows Service, Data Sync</p>
 							</div>
 						</div>
 					</div>
@@ -436,8 +501,8 @@
 								</a>
 							</div>
 							<div class="short_info">
-								<h4><a href="portfolio-details.html">multiply fowl</a></h4>
-								<p>Animated, portfolio</p>
+								<h4><a href="http://pofishmarket.com/" target="_blank">PO Fish Market</a></h4>
+								<p>Django, E-commerce</p>
 							</div>
 						</div>
 					</div>
@@ -453,8 +518,8 @@
 								</a>
 							</div>
 							<div class="short_info">
-								<h4><a href="portfolio-details.html">green heaven</a></h4>
-								<p>Animated, portfolio</p>
+								<h4>Teleplay App</h4>
+								<p>Django, Teletalk Integration</p>
 							</div>
 						</div>
 					</div>
@@ -470,8 +535,8 @@
 								</a>
 							</div>
 							<div class="short_info">
-								<h4>fly male</h4>
-								<p>Animated, portfolio</p>
+								<h4>WASA Server</h4>
+								<p>Django, REST API</p>
 							</div>
 						</div>
 					</div>
@@ -487,8 +552,8 @@
 								</a>
 							</div>
 							<div class="short_info">
-								<h4><a href="portfolio-details.html">season face</a></h4>
-								<p>Animated, portfolio</p>
+								<h4>Remote Sync Client</h4>
+								<p>Windows Application, Remote Control</p>
 							</div>
 						</div>
 					</div>
@@ -623,6 +688,79 @@
 	</section>
 	End Newsletter Area =================-->
 
+	<!--================ Start Contact Area =================-->
+	<section id="contact_area" class="contact_area section_gap">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center">
+					<div class="main_title">
+						<h2>Get In Touch</h2>
+						<p>Ready to work together? Let's discuss your next project</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-md-6 mb-4">
+					<div class="contact-item cyberpunk-card text-center">
+						<div class="contact-icon">
+							<i class="fa fa-envelope" style="font-size: 2rem; color: #00FFFF; margin-bottom: 15px;"></i>
+						</div>
+						<h4 style="color: #4DFFFF;">Email</h4>
+						<p><a href="mailto:zhdruvo@gmail.com" style="color: #E8F4FD;">zhdruvo@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 mb-4">
+					<div class="contact-item cyberpunk-card text-center">
+						<div class="contact-icon">
+							<i class="fa fa-phone" style="font-size: 2rem; color: #00FFFF; margin-bottom: 15px;"></i>
+						</div>
+						<h4 style="color: #4DFFFF;">Phone</h4>
+						<p><a href="tel:+8801988353282" style="color: #E8F4FD;">+8801988353282</a></p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 mb-4">
+					<div class="contact-item cyberpunk-card text-center">
+						<div class="contact-icon">
+							<i class="fa fa-map-marker" style="font-size: 2rem; color: #00FFFF; margin-bottom: 15px;"></i>
+						</div>
+						<h4 style="color: #4DFFFF;">Location</h4>
+						<p style="color: #E8F4FD;">Dhaka, Bangladesh</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 mb-4">
+					<div class="contact-item cyberpunk-card text-center">
+						<div class="contact-icon">
+							<i class="fa fa-clock-o" style="font-size: 2rem; color: #00FFFF; margin-bottom: 15px;"></i>
+						</div>
+						<h4 style="color: #4DFFFF;">Availability</h4>
+						<p style="color: #E8F4FD;">7+ Years Experience<br>Available for Projects</p>
+					</div>
+				</div>
+			</div>
+			<div class="row mt-4">
+				<div class="col-lg-6 mb-4">
+					<div class="contact-item cyberpunk-card text-center">
+						<div class="contact-icon">
+							<i class="fa fa-linkedin" style="font-size: 2rem; color: #00FFFF; margin-bottom: 15px;"></i>
+						</div>
+						<h4 style="color: #4DFFFF;">LinkedIn</h4>
+						<p><a href="https://linkedin.com/in/zhdruvo" target="_blank" style="color: #E8F4FD;">Connect on LinkedIn</a></p>
+					</div>
+				</div>
+				<div class="col-lg-6 mb-4">
+					<div class="contact-item cyberpunk-card text-center">
+						<div class="contact-icon">
+							<i class="fa fa-github" style="font-size: 2rem; color: #00FFFF; margin-bottom: 15px;"></i>
+						</div>
+						<h4 style="color: #4DFFFF;">GitHub</h4>
+						<p><a href="https://github.com/Druvo" target="_blank" style="color: #E8F4FD;">View My Projects</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Contact Area =================-->
+
 	<!--================Footer Area =================-->
 	<footer id="footer_area" class="footer_area">
 		<div class="container">
@@ -631,28 +769,25 @@
 					<div class="footer_top flex-column">
 						<div class="footer_logo">
 							<a href="#">
-								<img src="img/logo.png" alt="">
+								<img style="height: 50px;" src="img/main_logo.png" alt="Zahid Hasan">
 							</a>
 							<h4>Follow Me</h4>
 						</div>
 						<div class="footer_social">
-							<a href="https://www.facebook.com/zhdruvo/"><i class="fa fa-facebook"></i></a>
-							<a href="https://twitter.com/zh_druvo"><i class="fa fa-twitter"></i></a>
-							<a href="https://dribbble.com/druvo_coder"><i class="fa fa-dribbble"></i></a>
-							
-							<a href="https://www.instagram.com/zhdruvo/"><i class="fa fa-instagram"></i></a>
-							<a href="https://www.linkedin.com/in/zhdruvo/"><i class="fa fa-linkedin"></i></a>
-							<a href="https://github.com/Druvo"><i class="fa fa-github"></i></a>
-							<a href="https://zhdruvo.wordpress.com/"><i class="fa fa-wordpress"></i></a>
+							<a href="https://www.facebook.com/z.druvo/" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+							<a href="https://twitter.com/Druvo100" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+							<a href="https://dribbble.com/druvo_coder" aria-label="Dribbble"><i class="fa fa-dribbble"></i></a>
+							<a href="https://www.instagram.com/zhdruvo/" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+							<a href="https://zhdruvo.wordpress.com/" aria-label="WordPress"><i class="fa fa-wordpress"></i></a>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row footer_bottom justify-content-center">
 				<p class="col-lg-8 col-sm-12 footer-text">
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+					Copyright &copy;<script>document.write(new Date().getFullYear());</script> Zahid Hasan. All rights reserved. 
+					<br>Senior Software Engineer | Backend Specialist | Enterprise Solutions
+				</p>
 			</div>
 		</div>
 	</footer>
@@ -675,6 +810,54 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="js/gmaps.min.js"></script>
 	<script src="js/theme.js"></script>
+	
+	<!-- Enhanced Navigation Script -->
+	<script>
+		// Smooth scrolling and active navigation
+		$(document).ready(function() {
+			// Smooth scrolling for navigation links
+			$('.navbar-nav .nav-link').click(function(e) {
+				var target = $(this).attr('href');
+				if (target.startsWith('#')) {
+					e.preventDefault();
+					var targetElement = $(target);
+					if (targetElement.length) {
+						$('html, body').animate({
+							scrollTop: targetElement.offset().top - 80
+						}, 800);
+					}
+				}
+			});
+			
+			// Update active navigation on scroll
+			$(window).scroll(function() {
+				var scrollPos = $(window).scrollTop() + 100;
+				
+				$('.navbar-nav .nav-link').each(function() {
+					var target = $(this).attr('href');
+					if (target.startsWith('#')) {
+						var targetElement = $(target);
+						if (targetElement.length) {
+							if (targetElement.offset().top <= scrollPos && 
+								targetElement.offset().top + targetElement.outerHeight() > scrollPos) {
+								$('.navbar-nav .nav-item').removeClass('active');
+								$(this).parent().addClass('active');
+							}
+						}
+					}
+				});
+			});
+			
+			// Navbar background effect on scroll
+			$(window).scroll(function() {
+				if ($(window).scrollTop() > 50) {
+					$('.navbar').addClass('scrolled');
+				} else {
+					$('.navbar').removeClass('scrolled');
+				}
+			});
+		});
+	</script>
 </body>
 
 </html>
