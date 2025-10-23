@@ -606,6 +606,27 @@ html {
     position: relative;
 }
 
+/* Remove border, background, and hover effects from banner_content cyberpunk-card */
+.banner_content.cyberpunk-card {
+    background: none !important;
+    border: none !important;
+    backdrop-filter: none !important;
+    transition: none !important;
+}
+
+.banner_content.cyberpunk-card:hover {
+    border-color: transparent !important;
+    transform: none !important;
+}
+
+.banner_content.cyberpunk-card::before {
+    display: none !important;
+}
+
+.banner_content.cyberpunk-card:hover::before {
+    opacity: 0 !important;
+}
+
 /* Add floating effect to banner image */
 .home_right_img img {
     animation: float 3s ease-in-out infinite;
