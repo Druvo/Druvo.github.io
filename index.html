@@ -42,24 +42,63 @@
 	<!--================ Start Header Area =================-->
 	<header class="header_area">
 		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+			<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
+					<!-- Single Logo for all screen sizes -->
 					<a class="navbar-brand logo_h" href="index.html">
-						<img style="height: 80px;" src="img/main_logo.png" alt="Zahid Hasan Logo">
+						<img class="cyberpunk-logo" src="img/main_logo.png" alt="Zahid Hasan - Senior Software Engineer">
 					</a>
+					
+					<!-- Mobile toggle button -->
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 						aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					
+					<!-- Collapsible Navigation Menu -->
 					<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav">
-							<li class="nav-item active"><a class="nav-link" href="#home_banner_area">About</a></li>
-							<li class="nav-item"><a class="nav-link" href="#skills_area">Skills</a></li>
-							<li class="nav-item"><a class="nav-link" href="#experience_area">Experience</a></li>
-							<li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-							<li class="nav-item"><a class="nav-link" href="#contact_area">Contact</a></li>
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link active" href="#home_banner_area">
+									<i class="fa fa-home d-lg-none mr-2"></i>Home
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#skills_area">
+									<i class="fa fa-user d-lg-none mr-2"></i>About Me
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#skills_area">
+									<i class="fa fa-code d-lg-none mr-2"></i>Skills
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#experience_area">
+									<i class="fa fa-briefcase d-lg-none mr-2"></i>Experience
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#portfolio">
+									<i class="fa fa-folder-open d-lg-none mr-2"></i>Portfolio
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#contact_area">
+									<i class="fa fa-envelope d-lg-none mr-2"></i>Contact
+								</a>
+							</li>
+							<li class="nav-item d-lg-none">
+								<a class="nav-link" href="#" onclick="downloadResume()">
+									<i class="fa fa-download mr-2"></i>Resume
+								</a>
+							</li>
+							<!-- Desktop CTA Button as nav item -->
+							<li class="nav-item d-none d-lg-block">
+								<a href="mailto:zhdruvo@gmail.com?subject=Hire%20Me%20-%20Project%20Inquiry&body=Hi%20Zahid,%0A%0AI%20am%20interested%20in%20discussing%20a%20project%20opportunity%20with%20you.%0A%0AProject%20Details:%0A-%20%0A%0APlease%20let%20me%20know%20your%20availability.%0A%0AThank%20you!" class="nav-link cyberpunk-btn-nav">
+									<i class="fa fa-rocket mr-2"></i>Hire Me
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -118,7 +157,6 @@
 							</div>
 							
 							<div class="d-flex align-items-center mt-4">
-								<a class="primary_btn cyberpunk-btn" href="https://fiverr.com/druvo_coder"><span>Hire Me</span></a>
 								<a class="primary_btn tr-bg cyberpunk-btn ml-3" href="Zahid_resume.pdf" target="_blank">
 									<i class="fa fa-download"></i> <span>Download Resume</span>
 								</a>
@@ -135,51 +173,6 @@
 		</div>
 	</section>
 	<!--================ End Home Banner Area =================-->
-
-	<!--================ Start Achievement Stats Area =================-->
-	<section class="achievement_area section_gap_bottom">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-md-6 text-center">
-					<div class="achievement-card cyberpunk-card">
-						<div class="achievement-icon">
-							<i class="fa fa-trophy" style="font-size: 3rem; color: #00FFFF;"></i>
-						</div>
-						<h3 style="color: #4DFFFF; font-size: 2.5rem; margin: 15px 0 5px 0;">7+</h3>
-						<p style="color: #E8F4FD; font-weight: 500;">Years Experience</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 text-center">
-					<div class="achievement-card cyberpunk-card">
-						<div class="achievement-icon">
-							<i class="fa fa-code" style="font-size: 3rem; color: #00FFFF;"></i>
-						</div>
-						<h3 style="color: #4DFFFF; font-size: 2.5rem; margin: 15px 0 5px 0;">50+</h3>
-						<p style="color: #E8F4FD; font-weight: 500;">Projects Delivered</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 text-center">
-					<div class="achievement-card cyberpunk-card">
-						<div class="achievement-icon">
-							<i class="fa fa-users" style="font-size: 3rem; color: #00FFFF;"></i>
-						</div>
-						<h3 style="color: #4DFFFF; font-size: 2.5rem; margin: 15px 0 5px 0;">15+</h3>
-						<p style="color: #E8F4FD; font-weight: 500;">Happy Clients</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 text-center">
-					<div class="achievement-card cyberpunk-card">
-						<div class="achievement-icon">
-							<i class="fa fa-star" style="font-size: 3rem; color: #00FFFF;"></i>
-						</div>
-						<h3 style="color: #4DFFFF; font-size: 2.5rem; margin: 15px 0 5px 0;">4.9</h3>
-						<p style="color: #E8F4FD; font-weight: 500;">Client Rating</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================ End Achievement Stats Area =================-->
 
 	<!--================ Start Skills Area =================-->
 	<section id="skills_area" class="skills_area section_gap">
@@ -282,51 +275,6 @@
 	</section>
 	<!--================ End Skills Area =================-->
 
-	<!--================ Start Technology Stack Area =================-->
-	<section class="technology_area section_gap_bottom">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-8 text-center">
-					<div class="main_title">
-						<h2>Technology Stack</h2>
-						<p>Modern tools and frameworks I use to build enterprise solutions</p>
-					</div>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-lg-10">
-					<div class="tech-grid">
-						<div class="tech-item cyberpunk-card">
-							<i class="fa fa-code" style="color: #00FFFF; font-size: 2rem;"></i>
-							<span>C# / .NET Core</span>
-						</div>
-						<div class="tech-item cyberpunk-card">
-							<i class="fa fa-server" style="color: #00FFFF; font-size: 2rem;"></i>
-							<span>ASP.NET Core</span>
-						</div>
-						<div class="tech-item cyberpunk-card">
-							<i class="fa fa-database" style="color: #00FFFF; font-size: 2rem;"></i>
-							<span>SQL Server</span>
-						</div>
-						<div class="tech-item cyberpunk-card">
-							<i class="fa fa-cloud" style="color: #00FFFF; font-size: 2rem;"></i>
-							<span>Azure / AWS</span>
-						</div>
-						<div class="tech-item cyberpunk-card">
-							<i class="fa fa-docker" style="color: #00FFFF; font-size: 2rem;"></i>
-							<span>Docker</span>
-						</div>
-						<div class="tech-item cyberpunk-card">
-							<i class="fa fa-git" style="color: #00FFFF; font-size: 2rem;"></i>
-							<span>Git / GitHub</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================ End Technology Stack Area =================-->
-
 
 
 	<!--================ Start Features Area =================-->
@@ -388,55 +336,6 @@
 		</div>
 	</section>
 	<!--================ End Features Area =================-->
-
-	<!--================ Start Testimonials Area =================-->
-	<section class="testimonials_area section_gap_bottom">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-8 text-center">
-					<div class="main_title">
-						<h2>Client Testimonials</h2>
-						<p>What clients and colleagues say about working with me</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-6 mb-4">
-					<div class="testimonial-card cyberpunk-card">
-						<div class="testimonial-content">
-							<div class="quote-icon">
-								<i class="fa fa-quote-left" style="color: #00FFFF; font-size: 1.5rem;"></i>
-							</div>
-							<blockquote style="color: #E8F4FD; font-style: italic; margin: 20px 0;">
-								"Zahid delivered exceptional results on our enterprise management system. His technical expertise in ASP.NET Core and problem-solving skills helped us reduce processing time by 45% and improve system reliability."
-							</blockquote>
-							<div class="testimonial-author">
-								<h5 style="color: #4DFFFF; margin-bottom: 5px;">Sarah Ahmed</h5>
-								<span style="color: #C8D8E8; font-size: 0.9rem;">Project Manager, Government Sector</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 mb-4">
-					<div class="testimonial-card cyberpunk-card">
-						<div class="testimonial-content">
-							<div class="quote-icon">
-								<i class="fa fa-quote-left" style="color: #00FFFF; font-size: 1.5rem;"></i>
-							</div>
-							<blockquote style="color: #E8F4FD; font-style: italic; margin: 20px 0;">
-								"Working with Zahid was a game-changer for our project. His ability to architect scalable solutions and mentor junior developers made him an invaluable team member. Highly recommended!"
-							</blockquote>
-							<div class="testimonial-author">
-								<h5 style="color: #4DFFFF; margin-bottom: 5px;">Mohammad Rahman</h5>
-								<span style="color: #C8D8E8; font-size: 0.9rem;">Senior Developer, Tech Startup</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================ End Testimonials Area =================-->
 
 	<!--================ Start Experience Area =================-->
 	<section id="experience_area" class="experience_area section_gap">
@@ -1171,6 +1070,77 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="js/gmaps.min.js"></script>
 	<script src="js/theme.js"></script>
+	
+	<!-- Custom Navbar JavaScript -->
+	<script>
+		// Resume download function
+		function downloadResume() {
+			// Open email client with resume request
+			window.open('mailto:zhdruvo@gmail.com?subject=Resume%20Request&body=Hi%20Zahid,%0A%0AI%20would%20like%20to%20request%20a%20copy%20of%20your%20resume.%0A%0AThank%20you!', '_blank');
+		}
+		
+		// Enhanced navbar functionality
+		$(document).ready(function() {
+			// Smooth scrolling for navbar links
+			$('.navbar-nav .nav-link').on('click', function(e) {
+				var target = $(this).attr('href');
+				if (target.startsWith('#')) {
+					e.preventDefault();
+					$('html, body').animate({
+						scrollTop: $(target).offset().top - 100
+					}, 800, 'swing');
+					
+					// Close mobile menu after clicking
+					$('.navbar-collapse').collapse('hide');
+					
+					// Update active state
+					$('.navbar-nav .nav-link').removeClass('active');
+					$(this).addClass('active');
+				}
+			});
+			
+			// Navbar background on scroll
+			$(window).scroll(function() {
+				if ($(window).scrollTop() > 50) {
+					$('.navbar').addClass('scrolled');
+				} else {
+					$('.navbar').removeClass('scrolled');
+				}
+			});
+			
+			// Auto-highlight active section based on scroll position
+			$(window).on('scroll', function() {
+				var scrollTop = $(window).scrollTop();
+				var windowHeight = $(window).height();
+				
+				$('.navbar-nav .nav-link').each(function() {
+					var href = $(this).attr('href');
+					if (href.startsWith('#') && $(href).length) {
+						var section = $(href);
+						var sectionTop = section.offset().top - 150;
+						var sectionBottom = sectionTop + section.outerHeight();
+						
+						if (scrollTop >= sectionTop && scrollTop < sectionBottom) {
+							$('.navbar-nav .nav-link').removeClass('active');
+							$(this).addClass('active');
+						}
+					}
+				});
+			});
+			
+			// Enhanced mobile menu animation
+			$('.navbar-toggler').on('click', function() {
+				$(this).toggleClass('active');
+			});
+			
+			// Close mobile menu when clicking outside
+			$(document).on('click', function(e) {
+				if (!$(e.target).closest('.navbar').length) {
+					$('.navbar-collapse').collapse('hide');
+				}
+			});
+		});
+	</script>
 	
 	<!-- Enhanced Navigation Script -->
 	<script>
