@@ -7,6 +7,8 @@ const PORTFOLIO_API = (function () {
   // ── CONFIG ─────────────────────────────────────────────────────────────────
   const API_BASE = 'https://api-resume.druvium.xyz';
   const TIMEOUT_MS = 3000;
+  const GITHUB_USER = 'Druvo';
+  const CAREER_START = new Date('2018-02-01');
 
   // ── FETCH HELPERS ──────────────────────────────────────────────────────────
   async function fetchWithTimeout(url) {
@@ -52,7 +54,6 @@ const PORTFOLIO_API = (function () {
     set('hero-subtitle', cfg.heroSubtitle);
     set('hero-name', cfg.name);
     set('hero-tagline', cfg.tagline);
-    set('hero-availability', cfg.availabilityStatus);
 
     // Bio: first sentence is bolded
     const bioEl = document.getElementById('hero-bio');
@@ -217,9 +218,6 @@ const PORTFOLIO_API = (function () {
   // ── CONTACT SECTION ────────────────────────────────────────────────────────
   function updateContactSection(cfg) {
     const set = function (id, val) { const el = document.getElementById(id); if (el && val) el.textContent = val; };
-
-    set('availability-status', cfg.availabilityStatus);
-    set('years-experience', cfg.yearsOfExperience);
     set('contact-location', cfg.location);
 
     const emailLink = document.getElementById('contact-email-link');
@@ -318,8 +316,66 @@ const PORTFOLIO_API = (function () {
       .replace(/"/g, '&quot;');
   }
 
+  // ── YEARS OF EXPERIENCE ────────────────────────────────────────────────────
+  function updateYearsExperience() {
+    const years = Math.floor((Date.now() - CAREER_START) / (365.25 * 24 * 60 * 60 * 1000));
+    const el = document.getElementById('years-experience');
+    if (el) el.textContent = years + '+';
+  }
+
+  // ── GITHUB LIVE STATS ─────────────────────────────────────────────────────
+  async function fetchGithubStats() {
+    const GH = 'https://api.github.com';
+    const hdrs = { Accept: 'application/vnd.github.v3+json' };
+    try {
+      const [userRes, reposRes, bdRes, portfolioRes] = await Promise.all([
+        fetch(GH + '/users/' + GITHUB_USER, { headers: hdrs }),
+        fetch(GH + '/users/' + GITHUB_USER + '/repos?per_page=100', { headers: hdrs }),
+        fetch(GH + '/repos/' + GITHUB_USER + '/bangladesh', { headers: hdrs }),
+        fetch(GH + '/repos/' + GITHUB_USER + '/Druvo.github.io', { headers: hdrs }),
+      ]);
+
+      if (userRes.ok) {
+        const u = await userRes.json();
+        const el = document.getElementById('github-followers');
+        if (el) el.textContent = u.followers;
+      }
+
+      if (reposRes.ok) {
+        const repos = await reposRes.json();
+        const stars = repos.reduce(function (s, r) { return s + r.stargazers_count; }, 0);
+        const forks = repos.reduce(function (s, r) { return s + r.forks_count; }, 0);
+        const sEl = document.getElementById('github-stars');
+        const fEl = document.getElementById('github-forks');
+        if (sEl) sEl.textContent = stars;
+        if (fEl) fEl.textContent = forks;
+      }
+
+      if (bdRes.ok) {
+        const bd = await bdRes.json();
+        const sEl = document.getElementById('bangladesh-stars');
+        const fEl = document.getElementById('bangladesh-forks');
+        if (sEl) sEl.textContent = bd.stargazers_count;
+        if (fEl) fEl.textContent = bd.forks_count;
+      }
+
+      if (portfolioRes.ok) {
+        const repo = await portfolioRes.json();
+        const years = Math.floor((Date.now() - new Date(repo.created_at)) / (365.25 * 24 * 60 * 60 * 1000));
+        const el = document.getElementById('portfolio-years');
+        if (el) el.textContent = years + '+';
+      }
+    } catch {
+      // silently fail — static values remain
+    }
+  }
+
   // ── INIT ───────────────────────────────────────────────────────────────────
   async function init() {
+    // Always run — no backend dependency
+    updateYearsExperience();
+    fetchGithubStats();
+
     const health = await fetchWithTimeout(API_BASE + '/api/health');
     const isLive = health !== null;
 
