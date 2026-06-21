@@ -167,8 +167,8 @@ const PORTFOLIO_API = (function () {
 
     grid.innerHTML = services.map(function (svc) {
       return '<div class="col-lg-3 col-md-6">' +
-        '<div class="feature_item">' +
-        '<i class="fa ' + escHtml(svc.icon || 'fa-cog') + '"></i>' +
+        '<div class="feature_item cyberpunk-card">' +
+        '<div class="service-icon"><i class="fa ' + escHtml(svc.icon || 'fa-cog') + '" aria-hidden="true"></i></div>' +
         '<h4>' + escHtml(svc.title) + '</h4>' +
         '<p>' + escHtml(svc.desc) + '</p>' +
         '</div></div>';
