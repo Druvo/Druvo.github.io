@@ -103,16 +103,52 @@ const PORTFOLIO_API = (function () {
     el.style.display = 'block';
   }
 
-  // ── AVAILABILITY UPDATE ────────────────────────────────────────────────────
-  async function updateAvailability() {
+  // ── CONTACT SECTION UPDATE ─────────────────────────────────────────────────
+  async function updateContactSection() {
     const data = await fetchWithTimeout(`${API_BASE}/api/config`);
     if (!data) return;
 
+    // Availability card
     const availEl = document.getElementById('availability-status');
-    const expEl = document.getElementById('years-experience');
-
+    const expEl   = document.getElementById('years-experience');
     if (availEl && data.availabilityStatus) availEl.textContent = data.availabilityStatus;
-    if (expEl && data.yearsOfExperience) expEl.textContent = data.yearsOfExperience + ' Years Experience';
+    if (expEl   && data.yearsOfExperience)  expEl.textContent  = data.yearsOfExperience;
+
+    // Email
+    const emailLink = document.getElementById('contact-email-link');
+    if (emailLink && data.email) {
+      emailLink.href        = `mailto:${data.email}`;
+      emailLink.textContent = data.email;
+    }
+
+    // Phone — show card only when a number is set
+    const phoneCard = document.getElementById('contact-phone-card');
+    const phoneLink = document.getElementById('contact-phone-link');
+    if (phoneCard && phoneLink) {
+      if (data.phone) {
+        phoneLink.href        = `tel:${data.phone}`;
+        phoneLink.textContent = data.phone;
+        phoneCard.style.display = '';
+      } else {
+        phoneCard.style.display = 'none';
+      }
+    }
+
+    // Location
+    const locationEl = document.getElementById('contact-location');
+    if (locationEl && data.location) locationEl.textContent = data.location;
+
+    // LinkedIn
+    const linkedinLink = document.getElementById('contact-linkedin-link');
+    if (linkedinLink && data.linkedIn) {
+      linkedinLink.href = data.linkedIn;
+    }
+
+    // GitHub
+    const githubLink = document.getElementById('contact-github-link');
+    if (githubLink && data.gitHub) {
+      githubLink.href = data.gitHub;
+    }
   }
 
   // ── INIT ───────────────────────────────────────────────────────────────────
@@ -124,7 +160,7 @@ const PORTFOLIO_API = (function () {
     initContactForm(isLive);
 
     if (isLive) {
-      await updateAvailability();
+      await updateContactSection();
     }
   }
 

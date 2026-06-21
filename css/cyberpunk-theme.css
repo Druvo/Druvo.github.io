@@ -824,11 +824,6 @@ a:hover, a:focus {
     padding-bottom: 170px;
 }
 
-/* Experience area - remove bottom padding */
-.experience_area {
-    padding-bottom: 0 !important;
-}
-
 /* Portfolio filter styling - fix visibility */
 .portfolio_area .filters ul li {
     color: var(--primary-text) !important;
@@ -1004,8 +999,6 @@ a:hover, a:focus {
     
     .navbar-nav .nav-link:hover,
     .navbar-nav .nav-link.active {
-        transform: translateX(10px);
-        border-left: 3px solid #00FFFF;
     }
 }
 
