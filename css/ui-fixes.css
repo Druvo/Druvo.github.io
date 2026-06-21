@@ -254,9 +254,22 @@
 }
 
 /* ══════════════════════════════════════════════════════
-   7. SKILL CARDS — auto height, no forced minimum
+   7. SKILL CARDS — equal height per row via flex
    ══════════════════════════════════════════════════════ */
+#skills-grid .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: stretch;
+}
+
+#skills-grid .col-lg-4,
+#skills-grid .col-md-6 {
+    display: flex !important;
+    flex-direction: column;
+}
+
 .skill-category {
+    flex: 1 !important;
     min-height: auto !important;
     height: auto !important;
     margin-bottom: 24px;

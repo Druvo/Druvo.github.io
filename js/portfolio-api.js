@@ -88,7 +88,7 @@ const PORTFOLIO_API = (function () {
     const highlightsEl = document.getElementById('hero-highlights');
     if (highlightsEl && highlights.length) {
       highlightsEl.innerHTML = highlights.map(function (h) {
-        return '<div class="col-12">' +
+        return '<div class="col-6">' +
           '<div class="highlight-item">' +
           '<i class="fa fa-check-circle" style="color:#00FFFF;margin-right:6px;"></i>' +
           '<span>' + escHtml(h) + '</span>' +
