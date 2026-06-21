@@ -1,0 +1,410 @@
+/*
+ * ui-fixes.css — loaded after cyberpunk-theme.css
+ * Resolves duplicate/conflicting rule issues without touching the theme file.
+ */
+
+/* ══════════════════════════════════════════════════════
+   1. NAVBAR — mobile layout (logo left / toggle right)
+   ══════════════════════════════════════════════════════ */
+.navbar .container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .navbar .container {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: space-between !important;
+        gap: 0 !important;
+    }
+    .navbar-brand { order: 1 !important; flex: 0 0 auto !important; }
+    .navbar-collapse { order: 2 !important; flex: 1 1 auto !important; justify-content: flex-end !important; }
+    .navbar-toggler { display: none !important; }
+}
+
+/* Mobile / tablet */
+@media (max-width: 991.98px) {
+    .navbar .container {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 0 !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .navbar-brand {
+        order: 1 !important;
+        flex: 0 0 auto !important;
+        margin-right: auto !important;
+    }
+    .navbar-toggler {
+        order: 2 !important;
+        flex: 0 0 auto !important;
+        margin-left: 0 !important;
+    }
+    .navbar-collapse {
+        order: 3 !important;
+        flex: 1 1 100% !important;
+        width: 100% !important;
+        background: rgba(10, 28, 43, 0.98);
+        backdrop-filter: blur(20px);
+        border-radius: 8px;
+        border: 1px solid rgba(0, 255, 255, 0.2);
+        margin-top: 0.5rem;
+        padding: 0.75rem;
+    }
+    .navbar-nav {
+        width: 100%;
+        padding: 0;
+    }
+    .navbar-nav .nav-link {
+        text-align: left !important;
+        border-radius: 6px !important;
+        background: rgba(0, 255, 255, 0.05) !important;
+        border: 1px solid rgba(0, 255, 255, 0.1) !important;
+        margin: 3px 0 !important;
+        padding: 0.65rem 1rem !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        background: rgba(0, 255, 255, 0.12) !important;
+        border-color: rgba(0, 255, 255, 0.35) !important;
+        transform: translateX(6px) !important;
+        box-shadow: none !important;
+    }
+    .navbar-nav .nav-link::after { display: none !important; }
+    .cyberpunk-btn-nav {
+        display: block !important;
+        margin: 6px 0 2px !important;
+        text-align: center !important;
+        border-radius: 8px !important;
+    }
+}
+
+/* ══════════════════════════════════════════════════════
+   2. NAVBAR — desktop link hover (clean, no jitter)
+   ══════════════════════════════════════════════════════ */
+@media (min-width: 992px) {
+    .navbar-nav .nav-link {
+        padding: 0.6rem 1rem !important;
+        background: transparent !important;
+        border: none !important;
+        border-radius: 0 !important;
+        margin: 0 2px !important;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        transform: none !important;
+    }
+    .navbar-nav .nav-link::after {
+        bottom: 4px;
+    }
+}
+
+/* ══════════════════════════════════════════════════════
+   3. SECTION SPACING — consistent vertical rhythm
+   ══════════════════════════════════════════════════════ */
+.section_gap {
+    padding: 85px 0 !important;
+}
+
+.features_area {
+    padding: 85px 0 !important;
+}
+
+@media (max-width: 991.98px) {
+    .section_gap,
+    .features_area {
+        padding: 65px 0 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .section_gap,
+    .features_area {
+        padding: 50px 0 !important;
+    }
+}
+
+/* ══════════════════════════════════════════════════════
+   4. LOGO SIZE — override high-specificity .logo_h > img rule
+   ══════════════════════════════════════════════════════ */
+/* Desktop */
+@media (min-width: 992px) {
+    .navbar-brand.logo_h > img.cyberpunk-logo { height: 60px !important; }
+}
+/* Tablet / large mobile */
+@media (max-width: 991.98px) {
+    .navbar-brand.logo_h > img.cyberpunk-logo { height: 44px !important; }
+}
+/* Small mobile */
+@media (max-width: 576px) {
+    .navbar-brand.logo_h > img.cyberpunk-logo { height: 38px !important; }
+}
+
+/* ══════════════════════════════════════════════════════
+   5. HERO BANNER — proper clearance for fixed navbar
+   ══════════════════════════════════════════════════════ */
+
+/* style.css sets banner_inner { padding-top: 200px } — kill it,
+   we control spacing via .home_banner_area padding only */
+.home_banner_area .banner_inner {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.home_banner_area {
+    padding-top: 100px !important;
+    padding-bottom: 70px !important;
+}
+
+.home_banner_area .banner_inner .home_right_img {
+    padding-top: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 991.98px) {
+    .home_banner_area {
+        padding-top: 72px !important;
+        padding-bottom: 50px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .home_banner_area {
+        padding-top: 62px !important;
+        padding-bottom: 40px !important;
+    }
+}
+
+/* Banner h3 needs position:relative for ::after line */
+.banner_content h3 {
+    position: relative;
+    display: inline-block;
+}
+
+/* ══════════════════════════════════════════════════════
+   5. SECTION TITLES — consistent bottom spacing
+   ══════════════════════════════════════════════════════ */
+.main_title {
+    margin-bottom: 45px;
+}
+
+.main_title h2 {
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+/* ══════════════════════════════════════════════════════
+   6. SERVICE FEATURE ICONS — support bare <i> from JS
+   ══════════════════════════════════════════════════════ */
+/* Static HTML wraps icons in .service-icon div — already styled.
+   JS-rendered cards emit bare <i> directly inside .feature_item. */
+.feature_item > i.fa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: linear-gradient(45deg, #00FFFF, #00d4ff);
+    border-radius: 50%;
+    font-size: 1.8rem;
+    color: #051821 !important;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.feature_item:hover > i.fa {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+}
+
+/* ══════════════════════════════════════════════════════
+   7. SKILL CARDS — auto height, no forced minimum
+   ══════════════════════════════════════════════════════ */
+.skill-category {
+    min-height: auto !important;
+    height: auto !important;
+    margin-bottom: 24px;
+}
+
+/* ══════════════════════════════════════════════════════
+   8. OPEN SOURCE — project header icon alignment
+   ══════════════════════════════════════════════════════ */
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+/* Fix icon circle — something upstream applies flex:1 which stretches it */
+.project-icon {
+    flex: 0 0 50px !important;
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px;
+    border-radius: 50% !important;
+}
+
+/* Icon rendered by JS as bare <i class="fa ..."> (no wrapper div) */
+.project-header > i.fa {
+    flex: 0 0 48px !important;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px;
+    background: linear-gradient(45deg, #00FFFF, #00d4ff);
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #051821 !important;
+}
+
+/* Info block fills remaining space */
+.project-header .project-info,
+.project-header > div:not(.project-icon) {
+    flex: 1;
+    min-width: 0;
+}
+
+.project-header h5,
+.project-info h4 {
+    margin: 0 0 4px;
+}
+
+.project-header .project-stats {
+    font-size: 12px;
+    color: #888;
+}
+
+/* ══════════════════════════════════════════════════════
+   9. OPEN SOURCE — view link + tech tags
+   ══════════════════════════════════════════════════════ */
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #00FFFF;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-top: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-link:hover {
+    color: #fff;
+    transform: translateX(4px);
+    text-decoration: none;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+/* ══════════════════════════════════════════════════════
+   10. AVAILABILITY STATUS — pulsing indicator
+   ══════════════════════════════════════════════════════ */
+.status-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #4ade80;
+    border-radius: 50%;
+    margin-right: 8px;
+    flex-shrink: 0;
+    animation: pulse-green 2s ease-in-out infinite;
+}
+
+@keyframes pulse-green {
+    0%, 100% { box-shadow: 0 0 4px #4ade80; }
+    50%       { box-shadow: 0 0 10px #4ade80, 0 0 18px rgba(74,222,128,0.4); }
+}
+
+/* ══════════════════════════════════════════════════════
+   11. HERO BUTTONS — proper flex alignment
+   ══════════════════════════════════════════════════════ */
+.banner_content .d-flex.align-items-center {
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.banner_content .d-flex.align-items-center .primary_btn,
+.banner_content .d-flex.align-items-center a {
+    margin-left: 0 !important;
+}
+
+/* ══════════════════════════════════════════════════════
+   12. EXPERIENCE CARDS — consistent gap
+   ══════════════════════════════════════════════════════ */
+.experience-item.cyberpunk-card {
+    margin-bottom: 20px !important;
+}
+
+.experience-item .experience-details {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+.experience-item .experience-details li {
+    padding-left: 18px;
+    margin-bottom: 7px;
+    position: relative;
+    color: #C8D8E8;
+    font-size: 0.93rem;
+    line-height: 1.5;
+}
+
+.experience-item .experience-details li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    top: 1px;
+    color: #00FFFF;
+    font-size: 10px;
+}
+
+/* ══════════════════════════════════════════════════════
+   13. CONTRIBUTION STATS — proportional numbers
+   ══════════════════════════════════════════════════════ */
+.contribution-stat h3 {
+    font-size: 2.2rem !important;
+}
+
+/* ══════════════════════════════════════════════════════
+   14. SCROLL OFFSET — sections not hidden behind navbar
+   ══════════════════════════════════════════════════════ */
+html {
+    scroll-padding-top: 80px;
+}
+
+/* ══════════════════════════════════════════════════════
+   15. GENERAL SPACING — cards breathe
+   ══════════════════════════════════════════════════════ */
+.cyberpunk-card {
+    margin-bottom: 24px;
+}
+
+/* Remove double margin caused by Bootstrap mb-4 + cyberpunk-card */
+.experience-item.cyberpunk-card.mb-4 {
+    margin-bottom: 20px !important;
+}
