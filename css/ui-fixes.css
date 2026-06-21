@@ -174,6 +174,13 @@
     justify-content: center;
 }
 
+/* Prevent hero image from overflowing its column */
+.home_banner_area .banner_inner .home_right_img img {
+    max-width: 100% !important;
+    height: auto !important;
+    width: auto !important;
+}
+
 @media (max-width: 991.98px) {
     .home_banner_area {
         padding-top: 72px !important;
@@ -188,10 +195,25 @@
     }
 }
 
-/* Banner h3 needs position:relative for ::after line */
-.banner_content h3 {
-    position: relative;
-    display: inline-block;
+/* HELLO heading: flex row so the cyan line sits BESIDE the text, not through it */
+.home_banner_area .banner_inner .banner_content h3 {
+    display: flex !important;
+    align-items: center;
+    gap: 20px;
+    position: static !important;
+}
+
+.home_banner_area .banner_inner .banner_content h3::after {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    flex: 1;
+    max-width: 280px;
+    min-width: 30px;
+    height: 2px;
+    background: #00ffff !important;
+    content: '' !important;
+    display: block !important;
 }
 
 /* ══════════════════════════════════════════════════════
