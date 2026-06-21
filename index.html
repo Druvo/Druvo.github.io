@@ -1018,6 +1018,37 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- Contact Form - powered by API when live, mailto fallback when offline -->
+		<div class="row justify-content-center" style="margin-top:40px;">
+			<div class="col-lg-8">
+				<div class="contact-item cyberpunk-card p-4">
+					<h4 style="color:#4DFFFF;" class="mb-3"><i class="fa fa-paper-plane-o"></i> Send a Message</h4>
+					<form id="portfolio-contact-form" novalidate>
+						<div class="row">
+							<div class="col-md-6" style="margin-bottom:16px;">
+								<input type="text" name="contact_name" class="form-control" placeholder="Your Name" required style="background:#0a1c2b;border-color:#334155;color:#e2e8f0;" />
+							</div>
+							<div class="col-md-6" style="margin-bottom:16px;">
+								<input type="email" name="contact_email" class="form-control" placeholder="Your Email" required style="background:#0a1c2b;border-color:#334155;color:#e2e8f0;" />
+							</div>
+							<div class="col-12" style="margin-bottom:16px;">
+								<input type="text" name="contact_subject" class="form-control" placeholder="Subject" required style="background:#0a1c2b;border-color:#334155;color:#e2e8f0;" />
+							</div>
+							<div class="col-12" style="margin-bottom:16px;">
+								<textarea name="contact_message" class="form-control" rows="5" placeholder="Your message..." required style="background:#0a1c2b;border-color:#334155;color:#e2e8f0;"></textarea>
+							</div>
+							<div class="col-12">
+								<button type="submit" class="contact-submit-btn" style="background:#00d4ff;color:#0a1c2b;border:none;padding:10px 28px;border-radius:4px;font-weight:700;cursor:pointer;">Send Message</button>
+							</div>
+							<div class="col-12" style="margin-top:12px;">
+								<span class="contact-msg" style="display:none;"></span>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</section>
 	<!--================ End Contact Area =================-->
 
@@ -1045,7 +1076,7 @@
 			</div>
 			<div class="row footer_bottom justify-content-center">
 				<p class="col-lg-8 col-sm-12 footer-text">
-					Copyright &copy;<script>document.write(new Date().getFullYear());</script> Zahid Hasan. All rights reserved. 
+					<span id="api-status-badge" style="margin-right:12px;"></span>Copyright &copy;<script>document.write(new Date().getFullYear());</script> Zahid Hasan. All rights reserved. 
 					<br>Senior Software Engineer | Backend Specialist | Enterprise Solutions
 				</p>
 			</div>
@@ -1183,6 +1214,7 @@
 			// No background changes on scroll
 		});
 	</script>
+	<script src="js/portfolio-api.js"></script>
 </body>
 
 </html>
